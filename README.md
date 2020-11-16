@@ -1,17 +1,17 @@
 # ExpressProject_Starter
 
 ## Table of Contents
-- [Prereqs](#preqs)
-- [Setup](#setup)
-  1. [Open Project](#open_project)
+- [Prereqs](## Prereqs)
+- [Setup](## Setup)
+  1. [Open Project](## Open Project)
 
-## Prereqs {#preqs}
+## Prereqs
 - [Node js](https://nodejs.org/en/)
 - [Heroku](https://devcenter.heroku.com/articles/heroku-cli)
 - [Git](https://git-scm.com/downloads)
 - Code Editor (eg: [Visual Studio Code](https://code.visualstudio.com/))
 
-## Setup  {#setup}
+## Setup
 
 ### Open Project {#open_project}
 Create a root folder for the project. Then open that folder in your code editor.
