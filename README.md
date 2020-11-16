@@ -228,6 +228,6 @@ app.get('/about', function(req,res,next) {
 ...
 ```
 
-Now run your server and it should look like this.
+Now run your server and it should look like this. Try navigating between the pages.
 
 ![Multiple Pug Pages](/Images/Pug_Pages.png)
