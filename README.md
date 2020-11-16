@@ -101,12 +101,87 @@ Code Snippet (index.js):
 ...
 
 app.get('**', function(req,res,next) {
-  res.send('<h1>Hi there!</h1>');
+    res.send('<h1>Hi there!</h1>');
 })
 
 ...
 ```
 
 Now run your server again. You should see something like this.
+
+![Simple Server With Content](/Images/Simple_Server_1.png)
+
+## Setup Pug Engine
+
+### Require new modules
+We'll need to app variables for the consolidate module and path module. At the top of the index.js file, just below our express variable, we're going to require these two new modules.
+
+Code Snippet (index.js):
+```javascript
+...
+
+const engine = require('consolidate');
+const path = require('path');
+```
+
+### Configure app view engine
+Next we'll need to configure our app's view engine so that we can render pug files appropriately. In the index.js file, just below declaring our express app, we'll set our app's engine to pug using the engine variable we made. Then we tell our app where our pug files will be located and to use the pug engine that we set up.
+
+Code Snippet (index.js):
+```javascript
+...
+
+app.engine('pug', engine.pug);
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'pug');
+
+...
+```
+
+### Create and run pug pages
+First we'll create a 'views' folder in the main directory. Then in the 'views' folder, we'll create a pug file called 'index.pug'. So your directory should look like this.
+
+![Pug Engine Directory](/Images/Pug_Engine_Directory)
+
+We'll add just basic content to our page. In VScode, emmet can generate the base for our page by entering `!` then pressing `tab`. Add a header tag with content then your index.pug file should look like this.
+
+```pug
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+    body
+        h1 Hi there!
+```
+
+To run our new pug index page we'll change our app's get listener. It looked like this before.
+
+Code Snippet (index.js):
+```javascript
+...
+
+app.get('**', function(req,res,next) {
+    res.send('<h1>Hi there!</h1>');
+})
+
+...
+```
+
+We need to change it to render our pug page instead. Instead of using `res.send`, we're going to use `res.render` so express knows to render from our pug 'views' folder.
+
+Code Snippet (index.js):
+```javascript
+...
+
+app.get('**', function(req,res,next) {
+    res.render('index');
+}
+
+...
+```
+
+Now when you run your server it should look like this again.
 
 ![Simple Server With Content](/Images/Simple_Server_1.png)
