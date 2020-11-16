@@ -72,3 +72,9 @@ const port = 3000;
 const server = http.createServer(app);
 server.listen(port);
 ```
+
+### View the server
+To view the server, run this command into the terminal.
+
+Terminal Command:\
+`node index.js`
