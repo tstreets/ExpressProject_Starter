@@ -23,6 +23,7 @@
 - [Heroku](https://devcenter.heroku.com/articles/heroku-cli)
 - [Git](https://git-scm.com/downloads)
 - Code Editor (eg: [Visual Studio Code](https://code.visualstudio.com/))
+- [Heroku Account](https://signup.heroku.com/login)
 
 ## Setup
 ### Open Project
@@ -231,3 +232,57 @@ app.get('/about', function(req,res,next) {
 Now run your server and it should look like this. Try navigating between the pages.
 
 ![Multiple Pug Pages](/Images/Pug_Pages.png)
+
+## Deploy Project To Heroku
+
+### Update port
+Inside of the index.js file, we're going to update the port variable. Instead having it set to 3000, we're going to let it use a default value or 3000 if none is set. This is required for our project to run on heroku. It'll look like this.
+
+Code Snippet (index.js):
+```javascript
+...
+
+const port = process.env.PORT || 3000;
+
+...
+```
+
+### Update package.json
+Inside of the package.json file, we're going to add a command to the script. This command will run our app on Heroku. We have to name it start then we'll addd our command that we normally use to run our server. It should look like this.
+
+Code Snippet (package.json):
+```json
+...
+  "scripts": {
+    "start": "node index.js"
+  },
+...
+```
+
+### Create .gitignore
+We'll use a `.gitignore` file to exclude certain files or folders from our git pushes. Just create the file `.gitignore` at the root directory of your project then have it ignore `node_modules` like so
+
+Code Snippet (.gitignore):
+```gitignore
+node_modules
+```
+
+### Push to Heroku
+To push it to heroku we'll use a few git commands.
+
+1. `git init`
+  - Initializes our git repo for our project
+  
+2. `git add .`
+  - Adds everything from our project to our git commit.
+  
+3. `git commit -m "init"`
+  - Commits everything we added and name it "init"
+
+4. `heroku create`
+  - Creates a heroku app for you to push your git repo to
+  
+5. `git push heroku master`
+  - Pushes your commit to heroku
+  
+Now you can view you app using the link that was returned in the console. It should look something like this `https://app-id.herokuapp.com`. Use steps 2, 3, and 4 whenever you make changes to your project.
