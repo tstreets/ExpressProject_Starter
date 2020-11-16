@@ -46,10 +46,29 @@ Terminal Command:\
 ## Create Simple Server
 
 ### Require Modules Needed
+In the index.js file, we're going to store the modules we want to use as variables. To get the server started in a simple way we'll just need the express moduel that we installed and the http module that is built-in the node modules folder that was created.
 
-Code Snippet(index.js):\
+Code Snippet (index.js):
 ```javascript
 const http = require('http');
 const express = require('express');
 ```
 
+### Create the app
+Still in the index.js file, we're going to store the express app as a variable. This variable will handle interactions with the server.
+
+Code Snippet (index.js):
+```javascript
+const app = express();
+```
+
+### Create the server
+In the index.js file, we're going to create the server and tell it what port to listen to. This port is what will run our app.
+
+Code Snippet (index.js):
+```javascript
+const port = 3000;
+
+const server = http.createServer(app);
+server.listen(port);
+```
