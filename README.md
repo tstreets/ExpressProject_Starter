@@ -5,6 +5,8 @@
 - [Setup](#)
   1. [Open Project](#)
   2. [Initialize package.json](#)
+  3. [Create index.js](#)
+  4. [Install Dependencies](#)
 
 ## Prereqs
 - [Node js](https://nodejs.org/en/)
@@ -29,3 +31,12 @@ The package.json file is one of the most important files in any node js project.
 The index.js is going to be our main file for our app. Create this file it the root directory of the project.
 
 ![Root Directory](/Images/Index_JS.png)
+
+### Install Dependencies
+For all express projects you'll need to install express and a template view engine. I'll be using pug as my view engine and consolidate js to configure my view engine. I'll also use path js to join strings together as a path name. When we install these modules, we'll also save them as dependencies so that they can be used on an actual server.
+1. Express
+2. Pug
+3. Consolidate
+4. Path
+
+`npm i express pug consolidate path --save`
