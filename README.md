@@ -1,13 +1,17 @@
 # ExpressProject_Starter
 
 ## Table of Contents
-- [Prereqs](#)
-- [Setup](#)
-  1. [Open Project](#)
-  2. [Initialize package.json](#)
-  3. [Create index.js](#)
-  4. [Install Dependencies](#)
-
+- [Prereqs](#prereqs)
+- [Setup](#setup)
+  1. [Open Project](#open-project)
+  2. [Initialize package.json](#initialize-package.json)
+  3. [Create index.js](#create-index.js)
+  4. [Install Dependencies](#install-dependencies)
+- [Create Simple Server](#create-simple-server)
+  1. [Require Modules Needed](#require-modules-needed)
+  2. [Create the app](#create-the-app)
+  2. [Create the server](#create-the-server)
+  4. [View the server](#view-the-server)
 ## Prereqs
 - [Node js](https://nodejs.org/en/)
 - [Heroku](https://devcenter.heroku.com/articles/heroku-cli)
