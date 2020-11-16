@@ -141,7 +141,7 @@ app.set('view engine', 'pug');
 ### Create and run pug pages
 First we'll create a 'views' folder in the main directory. Then in the 'views' folder, we'll create a pug file called 'index.pug'. So your directory should look like this.
 
-![Pug Engine Directory](/Images/Pug_Engine_Directory)
+![Pug Engine Directory](/Images/Pug_Engine_Directory.png)
 
 We'll add just basic content to our page. In VScode, emmet can generate the base for our page by entering `!` then pressing `tab`. Add a header tag with content then your index.pug file should look like this.
 
