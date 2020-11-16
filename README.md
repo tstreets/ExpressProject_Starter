@@ -26,6 +26,6 @@ The package.json file is one of the most important files in any node js project.
 `npm init -y`
 
 ### Create index.js
-The index.js is going to be our main file for our app. Create this file it the root directory of the project.\
+The index.js is going to be our main file for our app. Create this file it the root directory of the project.
 
 ![Root Directory](/Images/Index_JS.png)
