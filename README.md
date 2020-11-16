@@ -10,4 +10,4 @@
 Create a root folder for the project. Then open that folder in your code editor.
 *I'll be using Visual Studio Code and will refer to the editor as VScode in furture instances*
 
-![Open Project](/images/Open_Project.png)
+![Open Project](/Images/Open_Project.png)
