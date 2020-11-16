@@ -12,6 +12,7 @@
   2. [Create the app](#create-the-app)
   2. [Create the server](#create-the-server)
   4. [View the server](#view-the-server)
+  4. [Add content to the server](#add-content-to-the-server)
 ## Prereqs
 - [Node js](https://nodejs.org/en/)
 - [Heroku](https://devcenter.heroku.com/articles/heroku-cli)
@@ -90,6 +91,8 @@ Terminal Command:\
 Right now we're not telling our app what content to load so any path will lead this this error.
 
 ![Simple Server](/Images/Simple_Server.png)
+
+### Add content to the server
 
 Let's fix this error by having it show a header tag, regardless of which page is accessed. We'll do this using the app's get listener. Listen for '\*\*', which is a wildcard used for any route, then send over our header tag. We'll add our code between our app variable and port variable.
 
