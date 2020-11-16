@@ -1,9 +1,9 @@
 # ExpressProject_Starter
 
 ## Table of Contents
-- [Prereqs](## Prereqs)
-- [Setup](## Setup)
-  1. [Open Project](## Open Project)
+- [Prereqs](#)
+- [Setup](#)
+  1. [Open Project](#)
 
 ## Prereqs
 - [Node js](https://nodejs.org/en/)
@@ -18,3 +18,8 @@ Create a root folder for the project. Then open that folder in your code editor.
 *I'll be using Visual Studio Code and will refer to the editor as VScode in furture instances*
 
 ![Open Project](/Images/Open_Project.png)
+
+### Initialize package.json
+The package.json file is one of the most important files in any node js project. We'll create a simple one by typing this command into your terminal.
+*I'm using VScode's built-in terminal*
+`npm init -y`
