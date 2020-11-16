@@ -40,3 +40,13 @@ For all express projects you'll need to install express and a template view engi
 4. Path
 
 `npm i express pug consolidate path --save`
+
+## Create Simple Server
+
+### Require Modules Needed
+
+```javascript
+const http = require('http');
+const express = require('express');
+```
+
