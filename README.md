@@ -230,4 +230,4 @@ app.get('/about', function(req,res,next) {
 
 Now run your server and it should look like this.
 
-![Multiple Pug Pages](/Images/Multiple_Pug_Pages.png)
+![Multiple Pug Pages](/Images/Pug_Pages.png)
