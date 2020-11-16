@@ -59,6 +59,8 @@ Still in the index.js file, we're going to store the express app as a variable. 
 
 Code Snippet (index.js):
 ```javascript
+...
+
 const app = express();
 ```
 
@@ -67,6 +69,8 @@ In the index.js file, we're going to create the server and tell it what port to 
 
 Code Snippet (index.js):
 ```javascript
+...
+
 const port = 3000;
 
 const server = http.createServer(app);
@@ -79,6 +83,19 @@ To view the server, run this command into the terminal.
 Terminal Command:\
 `node index.js`
 
-Right now we're not telling our app what content to load so any path will lead this this 404 error.
+Right now we're not telling our app what content to load so any path will lead this this error.
 
 ![Simple Server](/Images/Simple_Server.png)
+
+Let's fix this error by having it show a header tag, regardless of which page is accessed. We'll do this using the app's get listener. Listen for '\*\*', which is a wildcard used for any route, then send over our header tag. We'll add our code between our app variable and port variable.
+
+Code Snippet (index.js):
+```javascript
+...
+
+app.get('**', function(req,res,next) {
+  res.send('<h1>Hi there!</h1>');
+})
+
+...
+```
