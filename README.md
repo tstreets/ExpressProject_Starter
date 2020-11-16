@@ -25,6 +25,7 @@ Create a root folder for the project. Then open that folder in your code editor.
 The package.json file is one of the most important files in any node js project. We'll create a simple one by typing this command into your terminal.\
 *I'm using VScode's built-in terminal*
 
+Terminal Command:\
 `npm init -y`
 
 ### Create index.js
@@ -39,12 +40,14 @@ For all express projects you'll need to install express and a template view engi
 3. Consolidate
 4. Path
 
+Terminal Command:\
 `npm i express pug consolidate path --save`
 
 ## Create Simple Server
 
 ### Require Modules Needed
 
+Code Snippet(index.js):\
 ```javascript
 const http = require('http');
 const express = require('express');
