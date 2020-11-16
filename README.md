@@ -78,7 +78,7 @@ server.listen(port);
 ```
 
 ### View the server
-To view the server, run this command into the terminal.
+To view the server, run this command into the terminal. Then open your browser to `localhost:3000`. To stop the server simply press `Ctrl+C` in the terminal. 
 
 Terminal Command:\
 `node index.js`
@@ -99,3 +99,7 @@ app.get('**', function(req,res,next) {
 
 ...
 ```
+
+Now run your server again. You should see something like this.
+
+![Simple Server With Content](Simple_Server_1.png)
