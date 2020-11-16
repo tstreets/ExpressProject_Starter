@@ -109,4 +109,4 @@ app.get('**', function(req,res,next) {
 
 Now run your server again. You should see something like this.
 
-![Simple Server With Content](Simple_Server_1.png)
+![Simple Server With Content](/Images/Simple_Server_1.png)
