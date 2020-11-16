@@ -78,3 +78,7 @@ To view the server, run this command into the terminal.
 
 Terminal Command:\
 `node index.js`
+
+Right now we're not telling our app what content to load so any path will lead this this 404 error.
+
+![Simple Server](/Images/Simple_Server.png)
