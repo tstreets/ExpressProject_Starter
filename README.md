@@ -13,6 +13,11 @@
   2. [Create the server](#create-the-server)
   4. [View the server](#view-the-server)
   4. [Add content to the server](#add-content-to-the-server)
+- [Setup Pug Engine](#setup-pug-engine)
+  1. [Require new modules](#require-new-modules)
+  2. [Configure app view engine](#configure-app-view-engine)
+  3. [Create and run pug index](#create-and-run-pug-index)
+  3. [Multiple pug pages](#multiple-pug-pages)
 ## Prereqs
 - [Node js](https://nodejs.org/en/)
 - [Heroku](https://devcenter.heroku.com/articles/heroku-cli)
@@ -138,13 +143,14 @@ app.set('view engine', 'pug');
 ...
 ```
 
-### Create and run pug pages
+### Create and run pug index
 First we'll create a 'views' folder in the main directory. Then in the 'views' folder, we'll create a pug file called 'index.pug'. So your directory should look like this.
 
 ![Pug Engine Directory](/Images/Pug_Engine_Directory.png)
 
 We'll add just basic content to our page. In VScode, emmet can generate the base for our page by entering `!` then pressing `tab`. Add a header tag with content then your index.pug file should look like this.
 
+Code Snippet (views/index.pug):
 ```pug
 <!DOCTYPE html>
 html(lang="en")
@@ -182,6 +188,46 @@ app.get('**', function(req,res,next) {
 ...
 ```
 
-Now when you run your server it should look like this again.
+Now when you run your server, it should look like this again.
 
 ![Simple Server With Content](/Images/Simple_Server_1.png)
+
+### Multiple pug pages
+Cool so now we have an index page showing but lets make it more of a site. We'll add two more pages and navigate between them. In the `views` folder, create two pug files: `about.pug` and `contact.pug`. Put content in them like the `index.pug` file. Then add a nav tag to the body of each of the pug files. The nav should look like this.
+
+Code Snippet (views/contact.pug):
+```pug
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+    body
+        nav
+            a(href="/") Home
+            a(href="/about") About
+            a(href="/contact") Contact
+        h1 Contact
+```
+
+We need to setup new get listeners for our app. We'll add these before our current wildcard listener. We'll add one for contact then one for about. It will structured similarly. It should look like this.
+
+Code Snippet (index.js):
+```javascript
+...
+
+app.get('/contact', function(req,res,next) {
+    res.render('contact');
+})
+
+app.get('/about', function(req,res,next) {
+    res.render('about');
+})
+
+...
+```
+
+Now run your server and it should look like this.
+
+![Multiple Pug Pages](/Images/Multiple_Pug_Pages.png)
