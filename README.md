@@ -242,7 +242,7 @@ Now run your server and it should look like this. Try navigating between the pag
 ## Deploy Project To Heroku
 
 ### Update port
-Inside of the index.js file, we're going to update the port variable. Instead having it set to 3000, we're going to let it use a default value or 3000 if none is set. This is required for our project to run on heroku. It'll look like this.
+Inside of the index.js file, we're going to update the port variable. Instead of having it set to 3000 by default, we're going to let it use the server's default value. If there is none set then we'll use 3000. This is required for our project to run on heroku. It'll look like this.
 
 Code Snippet (index.js):
 ```javascript
