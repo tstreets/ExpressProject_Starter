@@ -291,4 +291,4 @@ To push it to heroku we'll use a few git commands.
 5. `git push heroku master`
   - Pushes your commit to heroku
   
-Now you can view you app using the link that was returned in the console. It should look something like this `https://app-id.herokuapp.com`. Use steps 2, 3, and 4 whenever you make changes to your project.
+Now you can view you app using the link that was returned in the console. It should look something like this `https://app-id.herokuapp.com`. Use steps 2, 3, and 5 whenever you make changes to your project.
